@@ -1,0 +1,480 @@
+/* css reset | @yojeero | https://github.com/yojeero */
+
+**, *::before, *::after {box-sizing: border-box} * {margin: 0}
+html, body{font-size: 62.5%; height: 100%}
+
+img, picture, video, canvas {display: block; max-width: 100%}
+p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word}
+input, button, textarea, select {font: inherit}
+ul[role='list'], ol[role='list'] {list-style: none}
+a {cursor: pointer; text-decoration: none; border: 0; background: transparent}
+a:active, a:focus, a:hover {outline-width: 0}
+
+/*  main  */
+
+body
+{
+	font-family : Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+	font-size : 1.6rem;
+	font-weight : 300;
+	line-height : 1.6;
+
+	margin : 0;
+	padding : 0;
+
+	color : #343434;
+    background : url(../img/wall.svg) no-repeat center, #f4f5f3;
+    background-size: cover;
+}
+
+.page
+{
+	display : grid;
+
+	width : 100%;
+	max-width : 1920px;
+	height : 100%;
+	min-height : 100vh;
+	max-height : 1080px;
+
+	margin : auto;
+
+	grid-template-areas : 'main sidebar';
+	grid-template-columns : 2fr 1fr;
+	place-items : center;
+}
+
+.main
+{
+	display : grid;
+
+	width : 100%;
+	height : 100vh;
+	max-height : 1080px;
+
+	background : url(../img/bg.svg) no-repeat center;
+	background-size : cover;
+
+	grid-area : main;
+}
+
+.about
+{
+	display : grid;
+	align-self : end;
+
+	margin : 0 0 8em 8em;
+
+	grid-template-rows : 220px max-content;
+	justify-items : start;
+}
+
+.about img
+{
+	width : 200px;
+	height : 200px;
+
+	border-radius : 50%;
+
+	object-fit : cover;
+}
+
+.about div
+{
+	margin-left : 2em;
+	padding : 0 2rem 0 2rem;
+
+	border-radius : 3px;
+}
+
+.about a
+{
+	font-size : 2rem;
+	font-weight : 400;
+	font-variant : small-caps;
+
+	letter-spacing : .2rem;
+
+	color : #fff;
+}
+
+.name
+{
+	background-color : #45d9db;
+}
+
+.name:hover ,
+.name:focus
+{
+	transition : all .3s;
+
+	color : #fff;
+	border : none;
+	outline : none;
+	background : #74b4d0;
+}
+
+.skill
+{
+	margin : 4px 0 4px;
+
+	background-color : #74b4d0;
+}
+
+.social
+{
+	background-color : #fff;
+}
+
+.social a
+{
+    color : #74b4d0;
+}
+
+.social a:hover ,
+.social a:focus
+{
+	color : #fff;
+}
+
+.skill:hover ,
+.skill:focus ,
+.social:hover ,
+.social:focus
+{
+	transition : all .3s;
+
+	border : none;
+	outline : none;
+	background : #45d9db;
+}
+
+/*  aside  */
+
+.sidebar
+{
+	display : grid;
+
+	width : 100%;
+	height : 100%;
+	max-height : 1080px;
+
+	background : #fff;
+
+	grid-area : sidebar;
+	grid-template-columns : 1fr;
+	grid-template-rows : 1fr 4.625rem auto 180px;
+}
+
+.txt-card
+{
+	display : grid;
+	order : 1;
+
+	margin : auto;
+	padding : 2rem 4rem;
+
+	grid-auto-rows : min-content;
+}
+
+.txt-card div
+{
+	margin-top : .5rem;
+	margin-bottom : .5rem;
+}
+
+.txt-card a
+{
+	color : #74b4d0;
+}
+
+.txt-card a:hover ,
+.txt-card a:focus
+{
+	font-size : 1.5rem;
+
+	padding : 4px 8px;
+
+	cursor : pointer;
+	transition : all .3s;
+	transform : scale(.1, 1);
+
+	color : #fff;
+	border-radius : 45px;
+	background : #45d9db;
+	box-shadow : 0 2px 8px rgba(0, 0, 0, .2);
+}
+
+.txt-label
+{
+	font-variant : small-caps;
+	line-height : 4.625rem;
+
+	display : grid;
+	display : grid;
+	order : 2;
+
+	height : 4.625rem;
+	padding-left : 4rem;
+
+	letter-spacing : .07rem;
+
+	color : #ebddbe;
+	background : #c7a64d;
+}
+
+.shot
+{
+	display : grid;
+	order : 3;
+
+	user-select : none;
+}
+
+.shot img
+{
+	width : auto;
+	min-height : 20%;
+
+	object-fit : cover;
+}
+
+/*  radio player  */
+
+.audio-player
+{
+	display : grid;
+	order : 4;
+
+	min-height : 20%;
+	max-height : 200px;
+
+	text-align : right;
+
+	background : #124559;
+
+	grid-template-columns : auto auto;
+	place-items : center;
+}
+
+.player-controls
+{
+	display : grid;
+
+	grid-auto-flow : column;
+	place-items : center;
+}
+
+.player-controls #playAudio
+{
+	display : grid;
+	align-items : center;
+
+	width : 5rem;
+	height : 5rem;
+
+	cursor : pointer;
+	transition : .3s;
+
+	background-color : #ae8f37;
+    mask : url(../img/play.svg);
+    mask-image : url(../img/play.svg);
+}
+
+.player-controls #playAudio:hover ,
+.player-controls #playAudio:focus
+{
+	transform : scale(1.2);
+	background-color : #c7a64d;
+}
+
+.player-controls #playAudio:active
+{
+	background-color : #c7a64d;
+}
+
+.player-controls #playAudio.pause
+{
+	background-color : #c7a64d;
+    mask : url(../img/stop.svg);
+    mask-image : url(../img/stop.svg);
+}
+
+.player-controls #currentTime
+{
+	font-size : 1.6rem;
+	font-variant : small-caps;
+	line-height : 1;
+
+	margin : 0 2rem;
+
+	letter-spacing : .04rem;
+
+	color : #608e9f;
+}
+
+.audio-info
+{
+	line-height : 1;
+
+	display : grid;
+	align-items : stretch;
+
+	color : #d1b76f;
+}
+
+.audio-info div
+{
+	font-variant : small-caps;
+
+	margin : 0;
+	padding : 0;
+
+	text-align : right;
+	letter-spacing : .07rem;
+}
+
+.track
+{
+	font-size : 1.4rem;
+}
+
+.track-data
+{
+	font-size : 2rem;
+}
+
+
+/*  loader  */
+
+.loader
+{
+	position : absolute;
+	z-index : 9999;
+	top : 0;
+	right : 0;
+	bottom : 0;
+	left : 0;
+
+	display : flex;
+	align-items : center;
+	justify-content : center;
+
+	width : 100%;
+	height : 100vh;
+
+	margin : auto;
+
+	background : #f4f5f3;
+}
+
+.cube-loader
+{
+	position : relative;
+
+	display : flex;
+
+	width : 3rem;
+	height : 3rem;
+}
+
+.cube-loader:after ,
+.cube-loader:before
+{
+	position : absolute;
+	top : 0;
+	left : 0;
+
+	width : 3rem;
+	height : 3rem;
+
+	content : '';
+	animation : rotation 2s ease-in-out infinite alternate;
+
+	border : 2px solid #ffc037;
+}
+
+.cube-loader:after
+{
+	animation-direction : alternate-reverse;
+	border-color : #fff;
+}
+
+@keyframes rotation {0% {transform: rotate(0deg) } 100% {transform: rotate(360deg) } }
+
+
+/* ---- device ------ */
+
+/*  Responsive mobile screen max 1024px  */
+
+@media screen and (max-width: 64rem )
+
+{
+
+.page
+{
+	grid-template-areas : 'main' 'sidebar';
+	grid-template-columns : 1fr;
+}
+
+.main
+{
+	display : grid;
+	order : 1;
+
+	width : 100%;
+	max-height : 660px;
+
+	grid-template-columns : 1fr;
+}
+
+.about
+{
+	align-self : center;
+
+	margin : auto;
+
+	justify-items : center;
+	place-items : center;
+}
+
+.about div
+{
+	margin-left : 0;
+}
+
+.sidebar
+{
+	display : grid;
+	order : 2;
+
+	width : 100%;
+	max-height : none;
+}
+
+.player
+{
+	padding : 2rem;
+}
+
+}
+
+/*  desktop wild and tv */
+
+/*  Responsive mobile screen max 1921px   */
+
+@media screen and (min-width: 120.0625rem)
+
+{
+
+.main
+{
+	box-shadow : -10px 0 8px -8px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar
+{
+	box-shadow : 10px 0 8px -8px rgba(0, 0, 0, .2);
+}
+
+}
