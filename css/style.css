@@ -88,7 +88,7 @@ body
 
 .about a
 {
-	font-size : 2rem;
+	font-size : 1.5rem;
 	font-weight : 400;
 	font-variant : small-caps;
 
@@ -190,7 +190,7 @@ body
 .txt-card a:hover ,
 .txt-card a:focus
 {
-	font-size : 1.5rem;
+	font-size : 1.125rem;
 
 	padding : 4px 8px;
 
@@ -301,7 +301,7 @@ body
 
 .player-controls #currentTime
 {
-	font-size : 1.6rem;
+	font-size : 1.25rem;
 	font-variant : small-caps;
 	line-height : 1;
 
@@ -335,12 +335,12 @@ body
 
 .track
 {
-	font-size : 1.4rem;
+	font-size : 1rem;
 }
 
 .track-data
 {
-	font-size : 2rem;
+	font-size : 1.25rem;
 }
 
 
