@@ -81,7 +81,7 @@ body
 .about div
 {
 	margin-left : 2em;
-	padding : 0 2rem 0 2rem;
+	padding : 4px 2rem 8px 2rem;
 
 	border-radius : 3px;
 }
@@ -167,6 +167,8 @@ body
 
 .txt-card
 {
+	font-size : 1.25rem;
+
 	display : grid;
 	order : 1;
 
@@ -177,7 +179,7 @@ body
 }
 
 .txt-card div
-{
+{	
 	margin-top : .5rem;
 	margin-bottom : .5rem;
 }
@@ -206,6 +208,7 @@ body
 
 .txt-label
 {
+	font-size : 1.375rem;
 	font-variant : small-caps;
 	line-height : 4.625rem;
 
@@ -335,14 +338,13 @@ body
 
 .track
 {
-	font-size : 1rem;
+	font-size : 1.125rem;
 }
 
 .track-data
 {
 	font-size : 1.25rem;
 }
-
 
 /*  loader  */
 
