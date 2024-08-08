@@ -29,14 +29,10 @@
 
   <svg viewBox="0 0 24 24">
     <style>
-        .spinner_d9Sa { transform-origin: center }
-        .spinner_qQQY { animation: spinner_ZpfF 9s linear infinite }
-        .spinner_pote { animation: spinner_ZpfF .75s linear infinite }
-        @keyframes spinner_ZpfF { 100% { transform: rotate(360deg) } }
-    </style>
-    <path d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,20a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z" />
-    <rect class="spinner_d9Sa spinner_qQQY" x="11" y="6" rx="1" width="2" height="7" />
-    <rect class="spinner_d9Sa spinner_pote" x="11" y="11" rx="1" width="2" height="9" />
+      .spinner_rXNP { animation: spinner_YeBj .8s infinite }
+      @keyframes spinner_YeBj { 0% { animation-timing-function: cubic-bezier(0.33, 0, .66, .33); cy: 5px } 46.875% { cy: 20px; rx: 4px; ry: 4px } 50% { animation-timing-function: cubic-bezier(0.33, .66, .66, 1); cy: 20.5px; rx: 4.8px; ry: 3px } 53.125% { rx: 4px; ry: 4px } 100% { cy: 5px } }
+  </style>
+  <ellipse class="spinner_rXNP" cx="12" cy="5" rx="4" ry="4" />
 </svg>
 
 </div>
@@ -93,7 +89,8 @@
 
         </div>
 
-        <div class="txt-label"> coding &#35; design &#8482; </div>
+        <div class="txt-label"> coding &amp; design &#8482; </div>
+        <!-- <div class="txt-label"> coding &#35; design &#8482; </div> -->
 
         <div class="shot">
             <img src="img/shot.webp" alt="" >
@@ -134,12 +131,41 @@
 
    <!-- vanilla audio player -->
    <script>
-     function $(id){return document.getElementById(id);};const media=$('audio');let ui={play:'playAudio',audio:'audio',currentTime:'currentTime'};function togglePlay(){if(media.paused===false){media.pause();$(ui.play).classList.remove('pause');}else{media.play();$(ui.play).classList.add('pause');}}
-     function calculateCurrentValue(currentTime){const currentMinute=parseInt(currentTime/60)%60;const currentSecondsLong=currentTime%60;const currentSeconds=currentSecondsLong.toFixed();const currentTimeFormatted=`${currentMinute<10?`0${currentMinute}`:currentMinute}:${currentSeconds<10?`0${currentSeconds}`:currentSeconds}`;return currentTimeFormatted;}
-     function showTime(){const currentTime=calculateCurrentValue(media.currentTime);$(ui.currentTime).innerHTML=currentTime;media.onended=()=>{$(ui.play).classList.remove('pause');$(ui.currentTime).innerHTML='00:00';};calculatePercentPlayed();}
-     $(ui.play).addEventListener('click',togglePlay)
-     $(ui.audio).addEventListener('timeupdate',showTime);
-   </script>
+      function $(id) {
+        return document.getElementById(id);
+      }
+      const media = $("audio");
+      let ui = { play: "playAudio", audio: "audio", currentTime: "currentTime" };
+      function togglePlay() {
+        if (media.paused === false) {
+          media.pause();
+          $(ui.play).classList.remove("pause");
+        } else {
+          media.play();
+          $(ui.play).classList.add("pause");
+        }
+      }
+      function calculateCurrentValue(currentTime) {
+        const currentMinute = parseInt(currentTime / 60) % 60;
+        const currentSecondsLong = currentTime % 60;
+        const currentSeconds = currentSecondsLong.toFixed();
+        const currentTimeFormatted = `${
+          currentMinute < 10 ? `0${currentMinute}` : currentMinute
+        }:${currentSeconds < 10 ? `0${currentSeconds}` : currentSeconds}`;
+        return currentTimeFormatted;
+      }
+      function showTime() {
+        const currentTime = calculateCurrentValue(media.currentTime);
+        $(ui.currentTime).innerHTML = currentTime;
+        media.onended = () => {
+          $(ui.play).classList.remove("pause");
+          $(ui.currentTime).innerHTML = "00:00";
+        };
+        calculatePercentPlayed();
+      }
+      $(ui.play).addEventListener("click", togglePlay);
+      $(ui.audio).addEventListener("timeupdate", showTime);
+    </script>
 
 </body>
 </html>

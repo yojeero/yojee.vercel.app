@@ -295,28 +295,18 @@ body
 	cursor : pointer;
 	transition : .3s;
 
-	background-color : #ae8f37;
-    mask : url(../img/play.svg);
-    mask-image : url(../img/play.svg);
+	background-image: url(../img/play.svg);
 }
 
 .player-controls #playAudio:hover ,
 .player-controls #playAudio:focus
 {
 	transform : scale(1.2);
-	background-color : #c7a64d;
-}
-
-.player-controls #playAudio:active
-{
-	background-color : #c7a64d;
 }
 
 .player-controls #playAudio.pause
 {
-	background-color : #c7a64d;
-    mask : url(../img/stop.svg);
-    mask-image : url(../img/stop.svg);
+	background-image: url(../img/stop.svg);
 }
 
 .player-controls #currentTime
@@ -387,13 +377,12 @@ body
 {
 	display : flex;
 
-	width : 2rem;
-	height : 2rem;
+	width : 3rem;
+	height : 3rem;
 
-	fill : #000;
-	stroke : #000;
+	fill : #74b4d0;
+	stroke : #74b4d0;
 }
-
 
 /* ---- device ------ */
 
