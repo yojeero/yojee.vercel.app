@@ -86,21 +86,32 @@ body
 
 .about div
 {
-	margin-left : 2em;
-	padding : 4px 2rem 8px 2rem;
+	margin-left : 2rem;
+	padding : .4rem 2rem;
 
 	border-radius : 3px;
 }
 
-.about a
+.about div a
 {
-	font-size : 1.5rem;
+	font-size : 1.25rem;
+	font-weight : 400;
+	font-variant : small-caps;
+
+	letter-spacing : 1px;
+
+	color : #fff;
+}
+
+.about .social a
+{
+	font-size : 1.25rem;
 	font-weight : 400;
 	font-variant : small-caps;
 
 	letter-spacing : .2rem;
 
-	color : #fff;
+	color : #74b4d0;
 }
 
 .name
@@ -214,7 +225,7 @@ body
 
 .txt-label
 {
-	font-size : 1.375rem;
+	font-size : 1.25rem;
 	font-variant : small-caps;
 	line-height : 4.625rem;
 
@@ -278,8 +289,8 @@ body
 	display : grid;
 	align-items : center;
 
-	width : 5rem;
-	height : 5rem;
+	width : 3.75rem;
+	height : 3.75rem;
 
 	cursor : pointer;
 	transition : .3s;
@@ -310,7 +321,7 @@ body
 
 .player-controls #currentTime
 {
-	font-size : 1.25rem;
+	font-size : 1.125rem;
 	font-variant : small-caps;
 	line-height : 1;
 
@@ -339,7 +350,7 @@ body
 	padding : 0;
 
 	text-align : right;
-	letter-spacing : .07rem;
+	letter-spacing : 2px;
 }
 
 .track
@@ -349,7 +360,7 @@ body
 
 .track-data
 {
-	font-size : 1.25rem;
+	font-size : 1rem;
 }
 
 /*  loader  */
