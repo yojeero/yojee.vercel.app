@@ -108,10 +108,15 @@
 
 </div><!-- end page -->
 
- <!-- Loader hide -->  
- <script>
-	setTimeout(function(){document.querySelector('.loader').style.display='none'; }, 500 );
-</script>
+	<!-- SVG icons -->
+	<script src="https://cdn.jsdelivr.net/npm/svg4everybody@2.1.9/dist/svg4everybody.min.js" onload="svg4everybody({})"	async=""></script>
+
+  <!-- loader hide -->
+  <script>
+    setTimeout(function () {
+      document.querySelector(".loader").style.display = "none";
+    }, 500);
+  </script>
 
    <!-- vanilla audio player -->
    <script>
@@ -121,10 +126,6 @@
      $(ui.play).addEventListener('click',togglePlay)
      $(ui.audio).addEventListener('timeupdate',showTime);
    </script>
-
-     <!-- SVG icons -->
-<script src="js/svg4everybody.min.js"></script>
-<script>svg4everybody({polyfill: true});</script>
 
 </body>
 </html>
