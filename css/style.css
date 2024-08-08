@@ -363,7 +363,7 @@ body
 	font-size : 1rem;
 }
 
-/*  loader  */
+/* loader */
 
 .loader
 {
@@ -378,47 +378,21 @@ body
 	align-items : center;
 	justify-content : center;
 
-	width : 100%;
-	height : 100vh;
-
 	margin : auto;
 
 	background : #f4f5f3;
 }
 
-.cube-loader
+.loader svg
 {
-	position : relative;
-
 	display : flex;
 
-	width : 3rem;
-	height : 3rem;
+	width : 2rem;
+	height : 2rem;
+
+	fill : #000;
+	stroke : #000;
 }
-
-.cube-loader:after ,
-.cube-loader:before
-{
-	position : absolute;
-	top : 0;
-	left : 0;
-
-	width : 3rem;
-	height : 3rem;
-
-	content : '';
-	animation : rotation 2s ease-in-out infinite alternate;
-
-	border : 2px solid #ffc037;
-}
-
-.cube-loader:after
-{
-	animation-direction : alternate-reverse;
-	border-color : #fff;
-}
-
-@keyframes rotation {0% {transform: rotate(0deg) } 100% {transform: rotate(360deg) } }
 
 
 /* ---- device ------ */
