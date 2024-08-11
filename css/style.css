@@ -384,11 +384,9 @@ body
 	stroke : #74b4d0;
 }
 
-/* ---- device ------ */
+/* responsive */
 
-/*  Responsive mobile screen max 1024px  */
-
-@media screen and (max-width: 64rem )
+@media screen and (max-width: 64rem ) /*  screen max 1024px  */
 
 {
 
@@ -433,6 +431,11 @@ body
 	max-height : none;
 }
 
+.txt-card
+{
+	padding : 2rem;
+}
+
 .player
 {
 	padding : 2rem;
@@ -442,9 +445,7 @@ body
 
 /*  desktop wild and tv */
 
-/*  Responsive mobile screen max 1921px   */
-
-@media screen and (min-width: 120.0625rem)
+@media screen and (min-width: 120.0625rem) /*  screen max 1921px   */
 
 {
 
