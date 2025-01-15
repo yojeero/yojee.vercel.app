@@ -203,7 +203,7 @@ body
 
 .txt-card a
 {
-	color : #74b4d0;
+	color : #53a2c4;
 }
 
 .txt-card a:hover ,
@@ -238,8 +238,8 @@ body
 
 	letter-spacing : .07rem;
 
-	color : #ebddbe;
-	background : #c7a64d;
+	color : #fff;
+	background : #f1b650;
 }
 
 .shot
@@ -270,7 +270,7 @@ body
 
 	text-align : right;
 
-	background : #124559;
+	background : #f0b143;
 
 	grid-template-columns : auto auto;
 	place-items : center;
@@ -319,7 +319,7 @@ body
 
 	letter-spacing : .04rem;
 
-	color : #608e9f;
+	color : #fef9f2;
 }
 
 .audio-info
@@ -329,7 +329,7 @@ body
 	display : grid;
 	align-items : stretch;
 
-	color : #d1b76f;
+	color : #fff;
 }
 
 .audio-info div

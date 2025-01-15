@@ -1,3 +1,3 @@
 
-<img src="preview/view.webp">
+<img src="preview/look.webp">
 
