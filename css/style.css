@@ -1,19 +1,37 @@
 /* css reset | @yojeero | https://github.com/yojeero */
+*,::after,::before{box-sizing:border-box}html{box-sizing:border-box;font-size:100%;line-height:1.3;text-size-adjust:100%}body{height:100vh}img,picture{max-width:100%;display:block}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}button,h1,h2,h3,h4,input,label{line-height:1.1}h1,h2,h3,h4,h5,h6{text-wrap:balance;font-size:inherit;font-weight:inherit}button,input,select,textarea{font-family:inherit;font-size:inherit}ol,ul{list-style:none;margin:0;padding:0}a{color:currentColor;cursor:pointer;text-decoration:none}
 
-*, *::before, *::after { box-sizing: border-box; } 
-html { box-sizing: border-box; font-size: 100%; line-height: 1.3; text-size-adjust: 100%; } 
-body { height: 100vh; } 
+/* Fonts */
 
-img, picture { max-width: 100%; display: block; } 
-blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre { margin: 0; }
+@font-face
+{
+	font-family : 'Jost';
+	font-weight : 400;
+	font-style : normal;
 
-h1, h2, h3, h4, button, input, label { line-height: 1.1; } 
-h1, h2, h3, h4, h5, h6 {  text-wrap: balance; font-size: inherit; font-weight: inherit; }
+	font-display : swap;
+	src : url('../fonts/jost-latin-regular.woff2') format('woff2');
+}
 
-input, button, textarea, select { font-family: inherit; font-size: inherit; } 
+@font-face
+{
+	font-family : 'Jost';
+	font-weight : 300;
+	font-style : normal;
 
-ol, ul { list-style: none; margin: 0; padding: 0; }
-a { color: currentColor; cursor: pointer; text-decoration: none; }
+	font-display : swap;
+	src : url('../fonts/jost-latin-300.woff2') format('woff2');
+}
+
+@font-face
+{
+	font-family : 'Mabgate-Regular';
+	font-weight : 400;
+	font-style : normal;
+
+	font-display : swap;
+	src : url('../fonts/Mabgate-Regular.woff2') format('woff2');
+}
 
 /*  main  */
 
@@ -21,15 +39,15 @@ body
 {
 	font-family : Jost, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 	font-size : 1rem;
-	font-weight : 300;
+	font-weight : 400;
 	line-height : 1.6;
 
 	margin : 0;
 	padding : 0;
 
-	color : #343434;
-    background : url(../img/wall.svg) no-repeat center, #f4f5f3;
-    background-size: cover;
+	color : #262626;   
+	background : url(../img/bg.svg) no-repeat center, #f5f5f5;
+	background-size : cover;
 }
 
 .page
@@ -55,10 +73,12 @@ body
 
 	width : 100%;
 	height : 100vh;
-	max-height : 1080px;
+	max-height : 1080px;	
 
-	background : url(../img/bg.svg) no-repeat center;
+	background : url(../img/walk.svg) no-repeat center, #fafafa;
 	background-size : cover;
+
+	border-radius: 6px;
 
 	grid-area : main;
 }
@@ -66,12 +86,12 @@ body
 .about
 {
 	display : grid;
-	align-self : end;
 
-	margin : 0 0 8em 8em;
+	place-items: center;
+	padding : 2rem;
+	margin-left: 6rem;
 
-	grid-template-rows : 220px max-content;
-	justify-items : start;
+	grid-template-columns: 220px 1fr;
 }
 
 .about img
@@ -84,86 +104,24 @@ body
 	object-fit : cover;
 }
 
-.about div
+.about .h1
 {
-	margin-left : 2rem;
-	padding : .4rem 2rem;
-
-	border-radius : 3px;
-}
-
-.about div a
-{
-	font-size : 1.25rem;
+	padding: 2rem;
+	
+	font-family: Mabgate-Regular, sans-serif;
+	font-size : 4rem;
 	font-weight : 400;
-	font-variant : small-caps;
-
-	letter-spacing : 1px;
-
-	color : #fff;
+	line-height : 1;
 }
 
-.about .social a
+/* .about svg
 {
-	font-size : 1.25rem;
-	font-weight : 400;
-	font-variant : small-caps;
+	width : 2rem;
+	height : 2rem;
 
-	letter-spacing : .2rem;
-
-	color : #74b4d0;
-}
-
-.name
-{
-	background-color : #45d9db;
-}
-
-.name:hover ,
-.name:focus
-{
-	transition : all .3s;
-
-	color : #fff;
-	border : none;
-	outline : none;
-	background : #74b4d0;
-}
-
-.skill
-{
-	margin : 4px 0 4px;
-
-	background-color : #74b4d0;
-}
-
-.social
-{
-	background-color : #fff;
-}
-
-.social a
-{
-    color : #74b4d0;
-}
-
-.social a:hover ,
-.social a:focus
-{
-	color : #fff;
-}
-
-.skill:hover ,
-.skill:focus ,
-.social:hover ,
-.social:focus
-{
-	transition : all .3s;
-
-	border : none;
-	outline : none;
-	background : #45d9db;
-}
+	fill : none;
+	stroke: #e5e5e5;
+} */
 
 /*  aside  */
 
@@ -176,10 +134,11 @@ body
 	max-height : 1080px;
 
 	background : #fff;
+	border-radius: 6px;
 
 	grid-area : sidebar;
 	grid-template-columns : 1fr;
-	grid-template-rows : 1fr 4.625rem auto 180px;
+	grid-template-rows : 1fr auto minmax(20%,1fr) 20%;
 }
 
 .txt-card
@@ -187,10 +146,11 @@ body
 	font-size : 1.25rem;
 
 	display : grid;
-	order : 1;
 
 	margin : auto;
 	padding : 2rem 4rem;
+
+	color : #a3a3a3;
 
 	grid-auto-rows : min-content;
 }
@@ -203,24 +163,17 @@ body
 
 .txt-card a
 {
-	color : #53a2c4;
+	font-family : Mabgate-Regular, sans-serif;
+	color : #171717;
 }
 
 .txt-card a:hover ,
 .txt-card a:focus
 {
-	font-size : 1.125rem;
-
-	padding : 4px 8px;
-
 	cursor : pointer;
 	transition : all .3s;
-	transform : scale(.1, 1);
 
-	color : #fff;
-	border-radius : 45px;
-	background : #45d9db;
-	box-shadow : 0 2px 8px rgba(0, 0, 0, .2);
+	color : #06b6d4;
 }
 
 .txt-label
@@ -230,32 +183,24 @@ body
 	line-height : 4.625rem;
 
 	display : grid;
-	display : grid;
-	order : 2;
 
 	height : 4.625rem;
 	padding-left : 4rem;
 
 	letter-spacing : .07rem;
 
-	color : #fff;
-	background : #f1b650;
+	background : #fafafa;
 }
 
 .shot
 {
 	display : grid;
-	order : 3;
-
 	user-select : none;
 }
 
 .shot img
 {
-	width : auto;
-	min-height : 20%;
-
-	object-fit : cover;
+	width : 100%;
 }
 
 /*  radio player  */
@@ -263,14 +208,13 @@ body
 .audio-player
 {
 	display : grid;
-	order : 4;
 
-	min-height : 20%;
-	max-height : 200px;
+	width : 100%;
 
 	text-align : right;
+	border-radius: 6px;
 
-	background : #f0b143;
+	background : #fff;
 
 	grid-template-columns : auto auto;
 	place-items : center;
@@ -284,29 +228,28 @@ body
 	place-items : center;
 }
 
-.player-controls #playAudio
+.player-controls #playAudio svg
 {
 	display : grid;
 	align-items : center;
 
-	width : 3.75rem;
-	height : 3.75rem;
+	width : 4.625rem;
+	height : 4.625rem;
 
 	cursor : pointer;
-	transition : .3s;
+	fill: none;
+	stroke: #cbd5e1;
 
-	background-image: url(../img/play.svg);
+	box-shadow: 1px 1px 6px #fafafa;
+	border-radius: 50%;
+	background: transparent;
 }
 
-.player-controls #playAudio:hover ,
-.player-controls #playAudio:focus
+.player-controls #playAudio svg:hover ,
+.player-controls #playAudio svg:focus
 {
-	transform : scale(1.2);
-}
-
-.player-controls #playAudio.pause
-{
-	background-image: url(../img/stop.svg);
+	transition: all .5s ease-in-out;
+	transform : scale(1.1);
 }
 
 .player-controls #currentTime
@@ -316,24 +259,31 @@ body
 	line-height : 1;
 
 	margin : 0 2rem;
+	color : #cbd5e1;
 
 	letter-spacing : .04rem;
+}
 
-	color : #fef9f2;
+.player-controls #currentTime svg
+{
+	width : 1.5rem;
+	height : 1.5rem;
+
+	fill : #000;
+	stroke : #000;
 }
 
 .audio-info
 {
-	line-height : 1;
-
 	display : grid;
 	align-items : stretch;
-
-	color : #fff;
 }
 
-.audio-info div
+.audio-info p
 {
+	line-height : 1;
+	font-size : 1.125rem;
+	
 	font-variant : small-caps;
 
 	margin : 0;
@@ -341,16 +291,6 @@ body
 
 	text-align : right;
 	letter-spacing : 2px;
-}
-
-.track
-{
-	font-size : 1.125rem;
-}
-
-.track-data
-{
-	font-size : 1rem;
 }
 
 /* loader */
@@ -370,7 +310,7 @@ body
 
 	margin : auto;
 
-	background : #f4f5f3;
+	background : #f5f5f5;
 }
 
 .loader svg
@@ -380,8 +320,8 @@ body
 	width : 3rem;
 	height : 3rem;
 
-	fill : #74b4d0;
-	stroke : #74b4d0;
+	fill : #06b6d4;
+	stroke : #06b6d4;
 }
 
 /* responsive */
@@ -394,6 +334,8 @@ body
 {
 	grid-template-areas : 'main' 'sidebar';
 	grid-template-columns : 1fr;
+
+	padding : 1rem;
 }
 
 .main
@@ -409,17 +351,8 @@ body
 
 .about
 {
-	align-self : center;
-
 	margin : auto;
-
-	justify-items : center;
-	place-items : center;
-}
-
-.about div
-{
-	margin-left : 0;
+	grid-template-columns : 1fr;
 }
 
 .sidebar
@@ -441,18 +374,18 @@ body
 	padding : 2rem;
 }
 
+.txt-label
+{
+	padding-left : 2rem;
+}
+
 }
 
 /*  desktop wild and tv */
 
-@media screen and (min-width: 120.0625rem) /*  screen max 1921px   */
+@media screen and (min-width: 120rem) /*  screen max 1920px   */
 
 {
-
-.main
-{
-	box-shadow : -10px 0 8px -8px rgba(0, 0, 0, 0.2);
-}
 
 .sidebar
 {

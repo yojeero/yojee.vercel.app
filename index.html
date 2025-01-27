@@ -14,12 +14,6 @@
 
     <link rel="icon" type="image/svg+xml" href="img/fav.svg">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400&display=swap" rel="stylesheet">
-
     <!-- style CSS -->
   <link rel="stylesheet" href="css/style.css">
 
@@ -48,47 +42,45 @@
 <div class="page">
 
   <div class="main">
-
     <div class="about">
+  
+      <a href="https://github.com/yojeero" target="_blank">
+        <img src="img/avatar.webp" alt="">
+      </a>
 
-        <a href="https://github.com/yojeero" target="_blank">
-          <img src="img/avatar.webp" alt="">
-        </a>
+      <div class="h1">Hi, I'm Yojee, <br/> a Product Engineer .
 
-        <div class="name">
-          <a href="https://github.com/yojeero" target="_blank">i`m yojee</a>
-        </div>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 17a4 4 0 0 1-8 0V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2Z" />
+          <path d="M16.7 13H19a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H7" />
+          <path d="M 7 17h.01" />
+          <path d="m11 8 2.3-2.3a2.4 2.4 0 0 1 3.404.004L18.6 7.6a2.4 2.4 0 0 1 .026 3.434L9.9 19.8" />
+        </svg> -->
 
-        <div class="skill">
-          <a href="https://github.com/yojeero" target="_blank">product engineer</a>
-        </div>
-
-        <div class="social">
-          <a href="https://twitter.com/yojeero" target="_blank">@yojeero</a>
-        </div>
-
-      </div>
-
-    </div><!-- end main -->
+      </div>     
+  
+    </div>  
+  </div><!-- end main -->
 
     <div class="sidebar">
 
         <div class="txt-card">
 
-                <div>I'm a <a href="https://github.com/yojeero" target="_blank">Product Engineer
-                </a> and <a href="https://twitter.com/yojeero" target="_blank">Designer.</a>
+                <div>                  
+                I'm Yojee, a Product Engineer and Designer based in Cloud.
                 </div>
 
                 <div>I'm specialized in the full interaction that users have with the web platform, from its design to its development, as well as usability, performance and accessibility.
                 </div>
 
-                <div>Find me on
-                  <a href="https://github.com/yojeero" target="_blank">GitHub</a> /
-                  <a href="https://creativemarket.com/yojeero" target="_blank">Creative Market</a> /
-                  <a href="https://dribbble.com/yojeero" target="_blank">Dribbble</a>
+                <div>
+                  Works <a href="https://dribbble.com/yojeero" target="_blank">Dribbble</a> / <a href="https://creativemarket.com/yojeero" target="_blank">Creative Market</a> / <a href="https://x.com/yojeero" target="_blank">Twitter</a>
                 </div>
 
-                <div>Touch by <a onClick="javascript:window.open('mailto:yojeero@gmail.com', 'Mail'); event.preventDefault()" href="mailto:yojeero@gmail.com?Subject=Hi%20Yojee">Email</a> / view <a href="https://www.google.com/maps?q=48.135758,11.571973" target="_blank"> Map </a> / in <a href="https://wa.me/79015030025?text=I'm%20interested%20in%20your%20web%20products" target="_blank"> Whatsapp</a>
+                <div>
+                  Code
+                  <a href="https://github.com/yojeero" target="_blank">GitHub</a> / <a href="https://marketplace.visualstudio.com/publishers/Yojeero" target="_blank">VSCode</a> / <a href="https://packagecontrol.io/browse/authors/yojeero" target="_blank">Sublime Text</a> 
                 </div>
               
         </div>
@@ -96,7 +88,9 @@
         <div class="txt-label"> coding &amp; design &#8482; </div>
 
         <div class="shot">
-            <img src="img/arch.webp" alt="" >
+
+          <img src="img/pendev.webp" alt="" >
+
         </div>
 
          <div class="audio-player">
@@ -108,12 +102,24 @@
             <div class="player-controls">
 
               <div id="playAudio"></div>
-              <div id="currentTime">&#9022</div>
+              <div id="currentTime">
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 10v3" />
+                  <path d="M6 6v11" />
+                  <path d="M10 3v18" />
+                  <path d="M14 8v7" />
+                  <path d="M18 5v13" />
+                  <path d="M22 10v3" />
+                </svg>               
+
+              </div>
             </div>
 
           <div class="audio-info">
-              <div class="track">CITY23</div>
-              <div class="track-data">premium radio</div>
+              <p>CITY23</p>
+              <p>premium radio</p>
           </div>
 
         </div>
@@ -121,9 +127,6 @@
       </div><!-- end sidebar -->
 
 </div><!-- end page -->
-
-	<!-- SVG icons -->
-	<script src="https://cdn.jsdelivr.net/npm/svg4everybody@2.1.9/dist/svg4everybody.min.js" onload="svg4everybody({})"	async=""></script>
 
   <!-- loader hide -->
   <script>
@@ -142,10 +145,12 @@
       function togglePlay() {
         if (media.paused === false) {
           media.pause();
-          $(ui.play).classList.remove("pause");
+          $(ui.play).innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>`;
         } else {
           media.play();
-          $(ui.play).classList.add("pause");
+          $(ui.play).innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="10" x2="10" y1="15" y2="9"/><line x1="14" x2="14" y1="15" y2="9"/></svg>`;
         }
       }
       function calculateCurrentValue(currentTime) {
@@ -161,13 +166,18 @@
         const currentTime = calculateCurrentValue(media.currentTime);
         $(ui.currentTime).innerHTML = currentTime;
         media.onended = () => {
-          $(ui.play).classList.remove("pause");
+          $(ui.play).innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>`;
           $(ui.currentTime).innerHTML = "00:00";
         };
         calculatePercentPlayed();
       }
       $(ui.play).addEventListener("click", togglePlay);
       $(ui.audio).addEventListener("timeupdate", showTime);
+
+      // Initialize with play icon
+      $(ui.play).innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>`;
     </script>
 
 </body>
