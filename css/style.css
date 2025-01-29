@@ -42,10 +42,13 @@ body
 	font-weight : 400;
 	line-height : 1.6;
 
+	display:grid;
+	place-content: center;
+
 	margin : 0;
 	padding : 0;
 
-	color : #262626;   
+	color : #262626;
 	background : url(../img/bg.svg) no-repeat center, #f5f5f5;
 	background-size : cover;
 }
@@ -55,30 +58,24 @@ body
 	display : grid;
 
 	width : 100%;
-	max-width : 1920px;
 	height : 100%;
-	min-height : 100vh;
-	max-height : 1080px;
 
-	margin : auto;
+	background-color : #fafafa;
 
 	grid-template-areas : 'main sidebar';
 	grid-template-columns : 2fr 1fr;
-	place-items : center;
 }
 
 .main
 {
-	display : grid;
+	display : grid;	
+	place-content: center;
 
 	width : 100%;
-	height : 100vh;
-	max-height : 1080px;	
+	height : 100%;
+	max-height : 1080px;
 
-	background : url(../img/walk.svg) no-repeat center, #fafafa;
-	background-size : cover;
-
-	border-radius: 6px;
+	border-radius : 6px;
 
 	grid-area : main;
 }
@@ -87,15 +84,18 @@ body
 {
 	display : grid;
 
-	place-items: center;
-	padding : 2rem;
-	margin-left: 6rem;
+	background : url(../img/walk.svg) no-repeat bottom right, #f5f5f5;
+	background-size : 20% auto;
 
-	grid-template-columns: 220px 1fr;
+	grid-template-columns : 1fr;
+	grid-template-rows : 220px 1fr;
 }
 
 .about img
-{
+{	
+	display: grid;
+	place-self: center;
+	
 	width : 200px;
 	height : 200px;
 
@@ -109,19 +109,15 @@ body
 	padding: 2rem;
 	
 	font-family: Mabgate-Regular, sans-serif;
-	font-size : 4rem;
+	font-size : 6rem;
 	font-weight : 400;
 	line-height : 1;
 }
 
-/* .about svg
+.about .h1 span
 {
-	width : 2rem;
-	height : 2rem;
-
-	fill : none;
-	stroke: #e5e5e5;
-} */
+	color: #06b6d4;
+}
 
 /*  aside  */
 
@@ -129,16 +125,23 @@ body
 {
 	display : grid;
 
-	width : 100%;
-	height : 100%;
-	max-height : 1080px;
+	height : 100%; 
 
 	background : #fff;
 	border-radius: 6px;
 
-	grid-area : sidebar;
-	grid-template-columns : 1fr;
-	grid-template-rows : 1fr auto minmax(20%,1fr) 20%;
+	grid-area: sidebar;
+	grid-template-rows : minmax(40%,1fr) minmax(20%,1fr) 200px;
+}
+
+h3.txt-label
+{
+	font-family : Mabgate-Regular, sans-serif;
+	font-size : 1.5rem;
+	font-variant : small-caps;
+	line-height : 3rem;
+
+	color : #171717;
 }
 
 .txt-card
@@ -146,19 +149,17 @@ body
 	font-size : 1.25rem;
 
 	display : grid;
+	order: 1;
 
 	margin : auto;
 	padding : 2rem 4rem;
 
-	color : #a3a3a3;
-
-	grid-auto-rows : min-content;
+	color : #64748b;
 }
 
 .txt-card div
 {	
-	margin-top : .5rem;
-	margin-bottom : .5rem;
+	margin-top : 1.25rem;
 }
 
 .txt-card a
@@ -176,45 +177,39 @@ body
 	color : #06b6d4;
 }
 
-.txt-label
-{
-	font-size : 1.25rem;
-	font-variant : small-caps;
-	line-height : 4.625rem;
-
-	display : grid;
-
-	height : 4.625rem;
-	padding-left : 4rem;
-
-	letter-spacing : .07rem;
-
-	background : #fafafa;
-}
-
 .shot
 {
 	display : grid;
-	user-select : none;
+	order : 2;
+
+	width : 100%;
+	min-height : 400px;
+
+	background: url(../img/map.png) no-repeat center, #fafafa;
+	object-fit: cover;
 }
 
 .shot img
 {
 	width : 100%;
+	height : 400px;
 }
+
 
 /*  radio player  */
 
 .audio-player
 {
 	display : grid;
+	order : 3;
 
 	width : 100%;
+	height: 200px;
 
 	text-align : right;
-	border-radius: 6px;
 
-	background : #fff;
+	border-radius : 6px;
+	background : #f5f5f4;
 
 	grid-template-columns : auto auto;
 	place-items : center;
@@ -228,49 +223,50 @@ body
 	place-items : center;
 }
 
-.player-controls #playAudio svg
+.playIcon, #playAudio
 {
 	display : grid;
-	align-items : center;
+	
+	width : 3.25rem;
+	height : 3.25rem;
+	
+	cursor : pointer;
+	transition : all .3s;
+}
 
-	width : 4.625rem;
-	height : 4.625rem;
+.stopIcon
+{
+	display : grid;
+
+	display: none;
+
+	width : 3.25rem;
+	height : 3.25rem;
 
 	cursor : pointer;
-	fill: none;
-	stroke: #cbd5e1;
-
-	box-shadow: 1px 1px 6px #fafafa;
-	border-radius: 50%;
-	background: transparent;
+	transition : all .3s;
 }
 
-.player-controls #playAudio svg:hover ,
-.player-controls #playAudio svg:focus
-{
-	transition: all .5s ease-in-out;
-	transform : scale(1.1);
-}
-
-.player-controls #currentTime
+#currentTime
 {
 	font-size : 1.125rem;
 	font-variant : small-caps;
 	line-height : 1;
 
 	margin : 0 2rem;
-	color : #cbd5e1;
 
+	transition : all .3s ease-in;
 	letter-spacing : .04rem;
+
+	color : #cbd5e1;
 }
 
-.player-controls #currentTime svg
+#currentTime svg
 {
 	width : 1.5rem;
 	height : 1.5rem;
 
-	fill : #000;
-	stroke : #000;
+	stroke : #334155;
 }
 
 .audio-info
@@ -334,8 +330,6 @@ body
 {
 	grid-template-areas : 'main' 'sidebar';
 	grid-template-columns : 1fr;
-
-	padding : 1rem;
 }
 
 .main
@@ -344,14 +338,13 @@ body
 	order : 1;
 
 	width : 100%;
-	max-height : 660px;
+	height: 100vh;
 
 	grid-template-columns : 1fr;
 }
 
 .about
 {
-	margin : auto;
 	grid-template-columns : 1fr;
 }
 
@@ -361,7 +354,6 @@ body
 	order : 2;
 
 	width : 100%;
-	max-height : none;
 }
 
 .txt-card
@@ -374,22 +366,24 @@ body
 	padding : 2rem;
 }
 
-.txt-label
-{
-	padding-left : 2rem;
-}
-
 }
 
 /*  desktop wild and tv */
 
-@media screen and (min-width: 120rem) /*  screen max 1920px   */
+@media screen and (min-width: 120rem) /*  screen min 1920px   */
 
 {
+
+.page 
+{
+	width: 120rem;
+	height: 67.5rem;
+}
 
 .sidebar
 {
 	box-shadow : 10px 0 8px -8px rgba(0, 0, 0, .2);
 }
+
 
 }
