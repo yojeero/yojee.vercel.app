@@ -2,7 +2,6 @@
 <img src="preview/git.png">
 
 - Tailwind CSS v4
-- Can use Tailwind via CDN
 - HTML5, CSS3
 - Inline SVG icons 
 - Local Google Fonts
