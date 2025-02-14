@@ -1269,20 +1269,11 @@
   scroll-behavior: smooth;
 }
 
-@keyframes ring {
-  from {
-    stroke-dasharray: 0 257 0 0 1 0 0 258;
-  }
 
-  25% {
-    stroke-dasharray: 0 0 0 0 257 0 258 0;
-  }
+/* loader */ 
+@keyframes prog { to  {   width: 100%;} }
 
-  50%, to {
-    stroke-dasharray: 0 0 0 0 0 515 0 0;
-  }
-}
-
+/* mouse */
 @keyframes scroll {
   0% {
     transform: translateY(0);

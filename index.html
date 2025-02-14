@@ -21,23 +21,11 @@
 
 <body class="bg-stone-100">
 
-<!-- LOADER -->
-<div
-class="fixed top-0 left-0 z-50 grid w-full h-full bg-gray-100 loader place-content-center">
-<svg class="grid w-38 h-38" viewBox="0 0 200 200">
-		<defs>
-			<lineargradient id="ball" x1="1" y1="0.5" x2="0" y2="0.5">
-				<stop offset="0%" stop-color="hsl(313,90%,55%)" />
-				<stop offset="100%" stop-color="hsl(223,90%,55%)" />
-			</lineargradient>
-			<lineargradient x1="0" y1="0" x2="0" y2="1">
-				<stop offset="0%" stop-color="hsl(313,90%,55%)" />
-				<stop offset="100%" stop-color="hsl(223,90%,55%)" />
-			</lineargradient>
-		</defs>
-	<circle class="animate-[ring_2s_ease-out_infinite]" cx="100" cy="100" r="82" fill="none" stroke="url(#ball)" stroke-width="36" stroke-dasharray="0 257 1 257" stroke-dashoffset="0.01" stroke-linecap="round" transform="rotate(-90,100,100)" />	
-</svg>
-</div>
+  <!-- LOADER -->
+  <div class="loader fixed z-50 top-0 right-0 bottom-0 left-0 flex items-center justify-center m-auto bg-gray-100">
+    <div class="relative block overflow-hidden w-xs h-2 bg-white
+    after:absolute after:top-0 after:left-0 after:w-0 after:h-full after:content-[''] after:animate-[prog_6s_ease-in_infinite] after:bg-gray-700"></div>
+  </div>   
 
   <!-- PAGE -->
 <main class="grid justify-center max-w-4xl text-base leading-relaxed border-dev text-slate-700 justify-self-center" id="home">
@@ -393,7 +381,7 @@ class="fixed top-0 left-0 z-50 grid w-full h-full bg-gray-100 loader place-conte
   <script>
     setTimeout(function () {
       document.querySelector(".loader").style.display = "none";
-    }, 300);
+    }, 100);
   </script>
 
    <!-- ALL JS -->
