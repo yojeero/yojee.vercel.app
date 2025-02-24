@@ -1,5 +1,5 @@
 
-<img src="preview/git.png">
+<img width="830" src="preview/git.png">
 
 - Tailwind CSS v4
 - HTML5, CSS3
