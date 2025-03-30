@@ -16,6 +16,8 @@
 
     <link rel="icon" type="image/svg+xml" href="./images/fav.svg">
 
+    <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
+
     <!-- STYLE CSS -->
   <link rel="stylesheet" href="./css/style.css">
   
@@ -35,13 +37,13 @@
   <!-- HEADER -->
   <div class="grid max-w-5xl min-h-screen place-content-evenly max-sm:p-4">
   
-      <div class="grid place-self-center max-sm:pb-4">
+      <div class="grid place-self-center max-sm:p-4">
         <a href="https://github.com/yojeero" target="_blank">  
-          <img class="object-cover w-xl" src="./images/top.svg" alt="">           
+          <img class="object-cover h-[50vh]" src="./images/top.svg" alt=""> 
         </a>
       </div>
   
-      <h1 class="grid leading-tight text-center place-self-center lg:text-8xl text-7xl">Hi, I'm Yojee, <p class="text-cyan-500"> a Product Engineer</p>
+      <h1 class="grid leading-tight text-center place-self-center lg:text-8xl text-7xl">Hi, I'm Yojee, <p class="text-slate-300"> a Product Engineer</p>
       </h1>
 
   </div><!-- end header -->
@@ -85,7 +87,7 @@
         </div>
 
         <!-- PLAYER -->
-         <div class="grid grid-cols-[2fr_2fr_3fr] w-full h-42 border-t-1 border-white">  
+         <div class="grid grid-cols-2 lg:grid-cols-[2fr_2fr_3fr] w-full h-42 border-t-1 border-white">  
 
           <audio id="audio">
             <source src="https://live.stream.maxfive.com/max5-city23?aggregator=liveradio" type="audio/mp3">
@@ -142,7 +144,7 @@
 
               </div>
 
-              <div class="grid pointer-events-none place-content-center">
+              <div class="lg:grid max-lg:hidden pointer-events-none place-content-center">
 
                 <p class="p-0 m-0 text-lg leading-none tracking-widest uppercase">CITY23</p>
 
@@ -154,16 +156,17 @@
 
         </div><!-- end about -->
 
-      <!-- FOOTER -->
-  <div class="grid w-full min-h-screen">
+      <!-- WORKS -->
+  <div class="grid w-full min-h-screen place-content-evenly max-sm:p-4">
     
-        <div class="grid mt-20 place-self-center">
+        <div class="grid">
           <a href="https://github.com/yojeero" target="_blank">
-            <img class="object-cover h-[50vh] m-auto" src="./images/go.svg" alt="">  
+            <img class="object-cover w-[80vh] m-auto" src="./images/talk.svg" alt="">        
           </a>
         </div>        
 
-<div class="grid w-full max-w-md p-4 m-auto my-20 bg-white rounded-md shadow-md sm:p-8">
+<div class="grid w-full max-w-md p-4 m-auto my-20 bg-white rounded-md 
+shadow-md sm:p-8">
 
   <div class="flex items-center justify-between mb-4">
 
@@ -334,7 +337,7 @@
  </div>
 </div>
 
-    </div><!-- end footer -->
+    </div>
 
     <!-- YOJEE -->   
     <div class="grid w-full h-24 place-items-center" id="foo">
