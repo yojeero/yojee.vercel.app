@@ -1,9 +1,10 @@
-
 <img src="preview/git.png">
 
-- Tailwind CSS v4
-- HTML5, CSS3
-- Inline SVG icons 
-- Local Google Fonts
-- Radio player via Vanilla JS
-- Fully responsive layout
+- 100% Responsive
+- Mobile-Friendly
+- Tailwind v4 and Vite
+- HTML5 and CSS
+- Vanilla JS
+- Google Font
+- SVG icons
+- Radio player
