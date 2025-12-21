@@ -1,7 +1,6 @@
-<img src="preview/git.png">
+<img src="preview/git.webp">
 
 - 100% Responsive
-- Mobile-Friendly
 - Tailwind v4 and Vite
 - HTML5 and CSS
 - Vanilla JS
