@@ -1,6 +1,6 @@
 <img src="preview/git.webp">
 
-```css
+```css width=50%
 > 100% responsive
 > Google Font
 > SVG icons
