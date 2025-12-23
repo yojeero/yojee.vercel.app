@@ -16,7 +16,7 @@
 
   <link rel="icon" href="./images/fav.svg" type="svg+xml" sizes="any" />
 
-  <!-- style CSS -->
+  <!-- STYLE CSS -->
   <link rel="stylesheet" href="./css/style.css">
 
 </head>
@@ -24,11 +24,12 @@
 <body class="bg-stone-100">
 
   <!--  LOADER TOP LINE  -->
-  <div id="top-loader"></div>
+  <div class="loader"></div>
 
   <!-- PAGE -->
   <main class="grid size-full max-w-4xl m-auto justify-center justify-self-center leading-relaxed text-slate-700"
     id="home">
+
     <!-- HEADER -->
     <div class="grid w-full min-h-dvh place-content-evenly max-sm:p-4">
       <div class="grid place-self-center max-sm:p-4">
@@ -42,7 +43,6 @@
         <p class="text-slate-400/60 leading-none">a Product Engineer</p>
       </h1>
     </div>
-    <!-- end header -->
 
     <!-- ABOUT -->
     <div class="grid w-full max-w-2xl m-auto border-white bg-stone-100 shadow-md rounded-3xl border">
@@ -101,13 +101,15 @@
 
       <!-- PLAYER -->
       <div class="grid grid-cols-2 lg:grid-cols-[2fr_2fr_3fr] w-full h-42 border-t border-white">
+
         <audio id="audio">
           <source src="https://live.stream.maxfive.com/max5-city23?aggregator=liveradio" type="audio/mp3" />
         </audio>
 
         <div
           class="grid text-orange-600 transition-all duration-300 ease-in-out bg-transparent border-solid outline-none cursor-pointer play place-content-center place-items-center border-r border-stone-300 hover:bg-white hover:shadow-2xl hover:border hover:border-stone-600 rounded-s-3xl hover:text-slate-400">
-          <div id="playIcon" class="playIcon stopIcon hover:cursor-pointer">
+
+          <div id="playToggle" aria-label="Play" class="playIcon stopIcon hover:cursor-pointer">
             <svg class="w-22 h-22" viewBox="0 0 24 24">
               <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"
                 d="M18.89 12.846c-.353 1.343-2.023 2.292-5.364 4.19c-3.23 1.835-4.845 2.752-6.146 2.384a3.25 3.25 0 0 1-1.424-.841C5 17.614 5 15.743 5 12s0-5.614.956-6.579a3.25 3.25 0 0 1 1.424-.84c1.301-.37 2.916.548 6.146 2.383c3.34 1.898 5.011 2.847 5.365 4.19a3.3 3.3 0 0 1 0 1.692"
@@ -122,6 +124,7 @@
                 color="currentColor" />
             </svg>
           </div>
+
         </div>
 
         <div id="waveIcon" class="grid pointer-events-none place-content-center place-items-center text-slate-500">
@@ -129,27 +132,27 @@
             stroke-linecap="round" stroke-linejoin="round">
             <path d="M2 10v3">
               <animate attributeName="d" values="M2 10v3; M2 5v13; M2 10v3" dur="1s" repeatCount="indefinite"
-                begin="click" />
+                begin="indefinite" />
             </path>
             <path d="M6 6v11">
               <animate attributeName="d" values="M6 6v11; M6 3v18; M6 6v11" dur="1s" repeatCount="indefinite"
-                begin="click" />
+                begin="indefinite" />
             </path>
             <path d="M10 3v18">
               <animate attributeName="d" values="M10 3v18; M10 8v7; M10 3v18" dur="1s" repeatCount="indefinite"
-                begin="click" />
+                begin="indefinite" />
             </path>
             <path d="M14 8v7">
               <animate attributeName="d" values="M14 8v7; M14 5v13; M14 8v7" dur="1s" repeatCount="indefinite"
-                begin="click" />
+                begin="indefinite" />
             </path>
             <path d="M18 5v13">
               <animate attributeName="d" values="M18 5v13; M18 10v3; M18 5v13" dur="1s" repeatCount="indefinite"
-                begin="click" />
+                begin="indefinite" />
             </path>
             <path d="M22 10v3">
               <animate attributeName="d" values="M22 10v3; M22 6v11; M22 10v3" dur="1s" repeatCount="indefinite"
-                begin="click" />
+                begin="indefinite" />
             </path>
           </svg>
         </div>
@@ -164,9 +167,8 @@
           </p>
         </div>
       </div>
-      <!-- end player -->
+
     </div>
-    <!-- end about -->
 
     <!-- WORKS -->
     <div class="grid w-full place-items-center max-sm:p-4">
@@ -382,9 +384,8 @@
         yojeero
       </a>
     </div>
-    <!-- end yojee -->
+
   </main>
-  <!-- end page -->
 
   <!-- COLOR FOOTER LINE -->
   <a href="#home" class="flex items-end w-full scroll">
@@ -396,18 +397,159 @@
 
     <div class="w-1/2 h-2 bg-linear-to-r from-lime-600 from-50% to-orange-600 to-50%"></div>
   </a>
-  <!-- JS -->
-  <script src="./js/page.js"></script>
 
-  <!-- HIDE LOADER -->
+  <!-- JS -->
+
+  <!-- LOADER HIDE -->
   <script>
-    window.onload = () => {
-      const loader = document.getElementById("top-loader");
-      if (loader) loader.style.opacity = "0";
-      setTimeout(() => {
-        if (loader) loader.style.display = "none";
-      }, 100);
-    };
+    window.addEventListener("load", () => {
+      const loader = document.querySelector(".loader");
+      if (!loader) return;
+      loader.classList.add("opacity-0");
+      setTimeout(() => loader.remove(), 300);
+    });
+  </script>
+
+  <!-- SMOOTH SCROLL -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const e =
+        "scrollingElement" in document
+          ? document.scrollingElement
+          : ((n = document.documentElement),
+            (t = n.scrollTop),
+            (n.scrollTop = t + 1),
+            (t2 = n.scrollTop),
+            (n.scrollTop = t),
+            t2 > t ? n : document.body);
+      const s = (n, d = 800) => {
+        const t = document.querySelector(n);
+        if (!t) return;
+        const r = e.scrollTop,
+          a =
+            Math.min(
+              r + t.getBoundingClientRect().top,
+              e.scrollHeight - window.innerHeight
+            ) - r,
+          i = performance.now();
+        const f = (o) => {
+          let u = Math.min((o - i) / d, 1),
+            c = u === 1 ? 1 : 1 - Math.pow(2, -10 * u);
+          (e.scrollTop = Math.round(r + a * c)),
+            u < 1
+              ? requestAnimationFrame(f)
+              : (history.pushState(null, null, n), (e.scrollTop = r + a));
+        };
+        requestAnimationFrame(f);
+      };
+      document.querySelectorAll("a.scroll").forEach((n) => {
+        n.addEventListener("click", (o) => {
+          o.preventDefault(), s(n.getAttribute("href"));
+        });
+      });
+    });
+  </script>
+
+  <!-- VANILLA RADIO PLAYER -->
+  <script>
+    (() => {
+      const audio = document.getElementById("audio");
+      const playBtn = document.getElementById("playToggle");
+      const stopBtn = document.getElementById("stopIcon");
+      const waveAnim = document.getElementById("waveIcon").querySelectorAll("animate");
+
+      if (!audio || !playBtn || !stopBtn || !waveAnim.length) return;
+
+      let isPlaying = false;          // is it playing now
+      let reconnectTimer;
+      const reconnectDelay = 4000;    // 4s – without aggressive server spam
+
+      // start the stream once in the background (muted)
+      let streamInitialized = false;
+      let streamInitInProgress = false;
+
+      // We prepare the radio stream in advance
+      audio.preload = "auto";
+      audio.crossOrigin = "anonymous";
+
+      const startWave = () => waveAnim.forEach(a => a.beginElement());
+      const stopWave = () => waveAnim.forEach(a => a.endElement());
+
+      const showPlayUI = () => {
+        playBtn.style.display = "block";
+        stopBtn.style.display = "none";
+        stopWave();
+      };
+
+      const showStopUI = () => {
+        playBtn.style.display = "none";
+        stopBtn.style.display = "block";
+        startWave();
+      };
+
+      const reconnect = () => {
+        // if the stream has not yet been initialized, do not interrupt the network
+        if (!streamInitialized) return;
+        clearTimeout(reconnectTimer);
+        reconnectTimer = setTimeout(() => {
+          audio.load();
+          audio.play().catch(() => {
+            // if it doesn’t work, try again at the same interval
+            reconnect();
+          });
+        }, reconnectDelay);
+      };
+
+      const initStream = () => {
+        if (streamInitialized || streamInitInProgress) return;
+        streamInitInProgress = true;
+
+        // quietly start the stream in the background so that the buffer is filled in advance
+        audio.muted = true;
+        audio.play().then(() => {
+          streamInitialized = true;
+          streamInitInProgress = false;
+        }).catch(() => {
+          streamInitInProgress = false;
+        });
+      };
+
+      // Initialize the stream the first time the user interacts with the page
+      window.addEventListener("pointerdown", initStream, { once: true });
+
+      const playAudio = () => {
+        // guarantee that the stream is running (muted) and simply turn on the sound
+        initStream();
+        audio.muted = false;
+        audio.play().then(() => {
+          isPlaying = true;
+          showStopUI();
+        }).catch(() => {
+          isPlaying = false;
+          reconnect();
+        });
+      };
+
+      const stopAudio = () => {
+        isPlaying = false;
+        // We don't stop the flow, we just instantly turn off the sound,
+        // so that the next Play the sound starts almost immediately
+        audio.muted = true;
+        showPlayUI();
+      };
+
+      const toggleAudio = () => {
+        if (isPlaying) stopAudio();
+        else playAudio();
+      };
+
+      playBtn.addEventListener("click", toggleAudio);
+      stopBtn.addEventListener("click", toggleAudio);
+
+      audio.addEventListener("stalled", reconnect);
+      audio.addEventListener("waiting", stopWave);
+      audio.addEventListener("error", reconnect);
+    })();
   </script>
 
 </body>
