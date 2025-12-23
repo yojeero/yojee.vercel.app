@@ -1,9 +1,9 @@
 <img src="preview/git.webp">
 
-100% responsive  
-Google Font  
-SVG icons  
-Radio player  
-Tailwind v4  
-Vanilla JS  
-HTML5 and CSS
+1. 100% responsive
+2. Google Font
+3. SVG icons
+4. Radio player
+5. Tailwind v4
+6. Vanilla JS
+7. HTML5 and CSS
