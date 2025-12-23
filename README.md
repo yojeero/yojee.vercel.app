@@ -6,4 +6,4 @@
 → Vanilla JS  
 → Google Font  
 → SVG icons  
-→> Radio player
+-> Radio player
