@@ -1,12 +1,9 @@
 <img src="preview/git.webp">
 
+-- Tailwind v4  
 -- 100% responsive  
--- Tailwind v4
-
 -- HTML5 and CSS  
--- Vanilla JS
-
+-- Vanilla JS  
 -- Google Font  
--- SVG icons
-
+-- SVG icons  
 -- Radio player
