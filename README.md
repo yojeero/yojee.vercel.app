@@ -4,9 +4,11 @@
 
 A personal portfolio focused on building thoughtful digital products.
 
-This site brings together product engineering and design in a simple, deliberate way. The work emphasizes clarity, usability, and performance—removing noise so ideas can speak for themselves.
+This site brings together product engineering and design in a simple, deliberate way.   
+The work emphasizes clarity, usability, and performance — removing noise so ideas can speak for themselves.
 
-Each project reflects a careful balance of structure and detail, from layout and interaction to accessibility and speed. Everything is designed to feel light, responsive, and easy to use.
+Each project reflects a careful balance of structure and detail, from layout and interaction to accessibility and speed.   
+Everything is designed to feel light, responsive, and easy to use.
 
 This is an ongoing practice of making things that work well, age well, and respect the user.
 
