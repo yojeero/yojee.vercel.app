@@ -1,11 +1,11 @@
 <img src="preview/git.webp">   
 
-### Personal site + FLAC radio player   
+### Personal website with lossless FLAC radio streaming   
 
 A personal portfolio focused on building thoughtful digital products.
 
 This site brings together product engineering and design in a simple, deliberate way.   
-   
+
 The work emphasizes clarity, usability, and performance — removing noise so ideas can speak for themselves.
 
 Each project reflects a careful balance of structure and detail, from layout and interaction to accessibility and speed.   
