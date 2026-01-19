@@ -1,4 +1,4 @@
-<img src="preview/preview.jpg" width="820">   
+<img src="preview/preview.jpg" width="830">   
 
 ### Personal website + FLAC radio streaming   
 
