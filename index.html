@@ -20,19 +20,9 @@
 
 </head>
 
-<body>
+<body class="loading">
 
-<!-- triangle loader -->
-<div class="loader">
-
-  <svg viewBox="0 0 100 90" width="64">
-    <path d="M50 6 L90 78 L10 78 Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="miter"
-      stroke-dasharray="22">
-      <animate attributeName="stroke-dashoffset" from="0" to="260" dur="2s" repeatCount="indefinite" />
-    </path>
-  </svg>
-
-</div>
+  <div class="loader"><div class="line"></div></div>
 
   <main id="home">
 
@@ -390,15 +380,18 @@
 
   <!-- JS -->
 
- <!-- LOADER hide -->
+  <!-- loader hide -->
   <script>
-    window.addEventListener("load", () => {
-      const loader = document.querySelector(".loader");
-      if (!loader) return;
-      loader.classList.add("opacity-0");
-      setTimeout(() => loader.remove(), 300);
-    });
-  </script>
+  window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader");
+    if (!loader) return;
+
+    document.body.classList.remove("loading");
+    loader.classList.add("opacity-0");
+
+    setTimeout(() => loader.remove(), 200);
+  });
+  </script> 
 
   <!-- SMOOTH SCROLL -->
   <script>
@@ -450,15 +443,12 @@
 
       if (!audio || !playBtn || !stopBtn || !waveAnim.length) return;
 
-      let isPlaying = false;          // is it playing now
+      let isPlaying = false;         
       let reconnectTimer;
-      const reconnectDelay = 4000;    // 4s – without aggressive server spam
-
-      // start the stream once in the background (muted)
+      const reconnectDelay = 4000;    
       let streamInitialized = false;
       let streamInitInProgress = false;
 
-      // We prepare the radio stream in advance
       audio.preload = "auto";
       audio.crossOrigin = "anonymous";
 
@@ -477,14 +467,12 @@
         startWave();
       };
 
-      const reconnect = () => {
-        // if the stream has not yet been initialized, do not interrupt the network
+      const reconnect = () => {  
         if (!streamInitialized) return;
         clearTimeout(reconnectTimer);
         reconnectTimer = setTimeout(() => {
           audio.load();
-          audio.play().catch(() => {
-            // if it doesn’t work, try again at the same interval
+          audio.play().catch(() => {     
             reconnect();
           });
         }, reconnectDelay);
@@ -494,7 +482,6 @@
         if (streamInitialized || streamInitInProgress) return;
         streamInitInProgress = true;
 
-        // quietly start the stream in the background so that the buffer is filled in advance
         audio.muted = true;
         audio.play().then(() => {
           streamInitialized = true;
@@ -504,11 +491,9 @@
         });
       };
 
-      // Initialize the stream the first time the user interacts with the page
       window.addEventListener("pointerdown", initStream, { once: true });
 
       const playAudio = () => {
-        // guarantee that the stream is running (muted) and simply turn on the sound
         initStream();
         audio.muted = false;
         audio.play().then(() => {
@@ -522,8 +507,6 @@
 
       const stopAudio = () => {
         isPlaying = false;
-        // We don't stop the flow, we just instantly turn off the sound,
-        // so that the next Play the sound starts almost immediately
         audio.muted = true;
         showPlayUI();
       };
