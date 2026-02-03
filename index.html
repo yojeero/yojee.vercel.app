@@ -15,7 +15,8 @@
 
   <link rel="icon" href="./images/fav.svg" type="svg+xml" sizes="any" />
 
-    <!-- GoogleFonts -->
+  
+  <!-- GoogleFonts -->
 <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -33,10 +34,13 @@
   <main id="home">
 
     <div class="header">
+
       <div class="header-ava max-sm:p-4">
+
         <a href="https://github.com/yojeero" target="_blank">
-          <img class="object-cover h-[46vh]" src="./images/ava.png" alt="" />
+          <img src="./images/ava.png" alt="" />
         </a>
+        
       </div>
 
       <h1 class="mb-8 max-sm:px-4">I'm Yojee, <span>a Product Engineer</span></h1>
@@ -452,6 +456,7 @@
       let isPlaying = false;         
       let reconnectTimer;
       const reconnectDelay = 4000;    
+
       let streamInitialized = false;
       let streamInitInProgress = false;
 
@@ -473,12 +478,12 @@
         startWave();
       };
 
-      const reconnect = () => {  
+      const reconnect = () => {
         if (!streamInitialized) return;
         clearTimeout(reconnectTimer);
         reconnectTimer = setTimeout(() => {
           audio.load();
-          audio.play().catch(() => {     
+          audio.play().catch(() => {
             reconnect();
           });
         }, reconnectDelay);
@@ -487,7 +492,7 @@
       const initStream = () => {
         if (streamInitialized || streamInitInProgress) return;
         streamInitInProgress = true;
-
+       
         audio.muted = true;
         audio.play().then(() => {
           streamInitialized = true;
@@ -496,7 +501,7 @@
           streamInitInProgress = false;
         });
       };
-
+    
       window.addEventListener("pointerdown", initStream, { once: true });
 
       const playAudio = () => {
@@ -512,7 +517,7 @@
       };
 
       const stopAudio = () => {
-        isPlaying = false;
+        isPlaying = false;   
         audio.muted = true;
         showPlayUI();
       };
