@@ -1,4 +1,4 @@
-<img src="preview/preview.jpg" width="830">   
+<img src="preview/view.jpg" width="830">   
 
 ### [Yojee](https://yojee.vercel.app/) portfolio + FLAC radio streaming   
 
