@@ -5,26 +5,20 @@
 <head>
 
   <meta charset="utf-8" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Yojee</title>
 
-  <meta name="description" content="Product Engineer, Yojee, @yojeero" />
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="description" content="I`m a Product Engineer - Yojee aka @yojeero" />
 
   <link rel="icon" href="./images/fav.svg" type="svg+xml" sizes="any" />
 
-  
-  <!-- GoogleFonts -->
-<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet"> -->
+  <link rel="preload" href="./images/avatar.png" as="image">
+  <link rel="preload" href="./images/shot.webp" as="image">
 
-  <!-- STYLE CSS -->
   <link rel="stylesheet" href="./css/style.css">
-
+  
 </head>
 
 <body class="loading">
@@ -35,21 +29,21 @@
 
     <div class="header">
 
-      <div class="header-ava max-sm:p-4">
+      <div class="header-ava">
 
         <a href="https://github.com/yojeero" target="_blank">
-          <img src="./images/ava.png" alt="" />
+          <img src="./images/avatar.png" alt="avatar" fetchpriority="high" />
         </a>
         
       </div>
 
-      <h1 class="mb-8 max-sm:px-4">I'm Yojee, <span>a Product Engineer</span></h1>
+      <h1>I'm Yojee, <span>a Product Engineer</span></h1>
 
     </div>
 
     <div class="about">
 
-      <div class="about-info px-10 py-10">
+      <div class="about-info">
 
         <h3>coding &amp; design</h3>
 
@@ -63,7 +57,7 @@
 
         <div>
 
-          <span class="mr-2">Works</span>
+          <span>Works</span>
 
           <a href="https://dribbble.com/yojeero" target="_blank">Dribbble / </a>
           <a href="https://creativemarket.com/yojeero" target="_blank">Creative Market / </a>
@@ -73,7 +67,7 @@
 
         <div>
 
-          <span class="mr-2">Code</span>
+          <span>Code</span>
 
         <a href="https://github.com/yojeero" target="_blank">GitHub / </a>
         <a href="https://marketplace.visualstudio.com/publishers/Yojeero" target="_blank">VSCode /
@@ -83,7 +77,9 @@
        </div>
       </div>
 
-      <div class="shot"><img src="./images/shot.webp" alt="" /></div>
+      <div class="shot">
+        <img src="./images/shot.webp" alt="shot" fetchpriority="high"/>
+      </div>
 
       <div class="player">
 
@@ -157,35 +153,35 @@
 
     </div>
 
-    <div class="folio max-sm:p-4">
+    <div class="folio">
 
-      <div class="brand my-20 p-8">
+      <div class="brand">
 
         <a href="https://astro.build/" target="_blank">
           <img src="./images/astro.svg" alt="" />
         </a>
 
         <a href="https://svelte.dev/" target="_blank">
-          <img src="./images/svelte.svg" alt="" />
+          <img src="./images/svelte.svg" alt="svelte" />
         </a>
 
         <a href="https://vercel.com/" target="_blank">
-          <img class="h-9" src="./images/vercel.svg" alt="" />
+          <img class="h-9" src="./images/vercel.svg" alt="vercel" />
         </a>
 
         <a href="https://tina.io/" target="_blank">
-          <img src="./images/tina.svg" alt="" />
+          <img src="./images/tina.svg" alt="tina" />
         </a>
 
         <a href="https://getkirby.com/" target="_blank">
-          <img src="./images/kirby.svg" alt="" />
+          <img src="./images/kirby.svg" alt="kirby" />
         </a>   
 
       </div>
 
-      <div class="works p-4 sm:p-8">
+      <div class="works">
 
-        <div class="card-top mb-4">
+        <div class="card-top">
 
           <h5>My Works</h5>
 
@@ -197,7 +193,7 @@
 
           <ul role="list">
 
-            <li class="py-3 sm:py-4">
+            <li>
 
               <div class="product">
 
@@ -212,10 +208,9 @@
 
                 <div class="product-new">
 
-                  <a href="https://creativemarket.com/yojeero/291024376-Cafe25" target="_blank"
-                    class="ms-3">Cafe25</a>
+                  <a href="https://creativemarket.com/yojeero/291024376-Cafe25" target="_blank">Cafe25</a>
 
-                  <p class="ms-3">PWA radio</p>
+                  <p>PWA radio</p>
 
                 </div>
 
@@ -225,7 +220,7 @@
 
             </li>
 
-            <li class="py-3 sm:py-4">
+            <li>
 
               <div class="product">
 
@@ -237,10 +232,9 @@
 
                 <div class="product-new">
 
-                  <a href="https://creativemarket.com/yojeero/291223012-Snoo" target="_blank"
-                    class="ms-3">Snoo</a>
+                  <a href="https://creativemarket.com/yojeero/291223012-Snoo" target="_blank">Snoo</a>
 
-                  <p class="ms-3">Tailwind Template</p>
+                  <p>Tailwind Template</p>
 
                 </div>
 
@@ -250,7 +244,7 @@
 
             </li>
 
-            <li class="py-3 sm:py-4">
+            <li>
 
               <div class="product">
 
@@ -265,10 +259,9 @@
 
                 <div class="product-new">
 
-                  <a href="https://creativemarket.com/yojeero/6038211-Junso" target="_blank"
-                    class="ms-3">Junso</a>
+                  <a href="https://creativemarket.com/yojeero/6038211-Junso" target="_blank">Junso</a>
 
-                  <p class="ms-3">Tailwind Template</p>
+                  <p>Tailwind Template</p>
 
                 </div>
 
@@ -278,7 +271,7 @@
 
             </li>
 
-            <li class="py-3 sm:py-4">
+            <li>
 
               <div class="product">
 
@@ -290,10 +283,9 @@
 
                 <div class="product-new">
 
-                  <a href="https://creativemarket.com/yojeero/3527594-Mocato" target="_blank"
-                    class="ms-3">Mocato</a>
+                  <a href="https://creativemarket.com/yojeero/3527594-Mocato" target="_blank">Mocato</a>
 
-                  <p class="ms-3">Tailwind Template</p>
+                  <p>Tailwind Template</p>
 
                 </div>
 
@@ -303,7 +295,7 @@
 
             </li>
 
-            <li class="py-3 sm:py-4">
+            <li>
 
               <div class="product">
 
@@ -318,10 +310,9 @@
 
                 <div class="product-new">
 
-                  <a href="https://creativemarket.com/yojeero/6230784-Viena" target="_blank"
-                    class="ms-3">Viena</a>
+                  <a href="https://creativemarket.com/yojeero/6230784-Beyo" target="_blank">Beyo</a>
 
-                  <p class="ms-3">Vanilla Radio Player</p>
+                  <p>Vanilla Radio Player</p>
 
                 </div>
 
@@ -331,7 +322,7 @@
 
             </li>
 
-            <li class="py-3 sm:py-4">
+            <li>
 
               <div class="product">
 
@@ -343,9 +334,9 @@
 
                 <div class="product-new">
 
-                  <a href="https://marketplace.visualstudio.com/items?itemName=Yojeero.cream" target="_blank" class="ms-3">Cream</a>
+                  <a href="https://marketplace.visualstudio.com/items?itemName=Yojeero.cream" target="_blank">Cream</a>
 
-                  <p class="ms-3">VSCode theme</p>
+                  <p>VSCode theme</p>
 
                 </div>
 
@@ -362,11 +353,11 @@
       </div>
     </div>
 
-    <footer class="mt-20" id="foo">
+    <footer id="foo">
 
       <a href="https://github.com/yojeero" target="_blank">
 
-        <svg class="mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
           stroke-linecap="round" stroke-linejoin="round">
           <path
             d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
@@ -492,7 +483,7 @@
       const initStream = () => {
         if (streamInitialized || streamInitInProgress) return;
         streamInitInProgress = true;
-       
+
         audio.muted = true;
         audio.play().then(() => {
           streamInitialized = true;
@@ -501,7 +492,7 @@
           streamInitInProgress = false;
         });
       };
-    
+
       window.addEventListener("pointerdown", initStream, { once: true });
 
       const playAudio = () => {
