@@ -10,12 +10,17 @@
   <title>Yojee</title>
 
   <meta name="description" content="I`m a Product Engineer - Yojee aka @yojeero" />
+
   <link rel="icon" href="./images/fav.svg" type="svg+xml" sizes="any" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 
   <link rel="preload" href="./images/ava.webp" as="image">
   <link rel="preload" href="./images/shot.webp" as="image">
 
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/index.css">
 
 </head>
 
@@ -81,9 +86,8 @@
 
       <div class="player">
 
-        <audio id="audio">
-            <source src="https://frequence3.net-radio.fr/frequence3-fm37.flac" 
-            type="audio/flac" />           
+        <audio id="audio" preload="auto" crossOrigin="anonymous">
+          <source src="https://live.stream.maxfive.com/max5-city23" type="audio/mpeg">
         </audio>
 
         <div class="controls">
@@ -143,8 +147,8 @@
         </div>
 
         <div class="channel">
-          <p class="station">Fréquence 3</p>
-          <p class="genre">radio flac</p>
+          <a href="https://www.city23.at/" target="_blank" class="station">City23</a>         
+          <p class="genre">premium radio</p>
         </div>
 
       </div>
@@ -524,7 +528,6 @@
       audio.addEventListener("error", reconnect);
     })();
   </script>
-
 
 </body>
 </html>
