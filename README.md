@@ -1,4 +1,4 @@
-<img src="preview/view.jpg" width="830">   
+<img src="preview/view.jpg" width="100%" max-width="800px">
 
 ### [Yojee](https://yojee.vercel.app/) portfolio
 
