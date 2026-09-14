@@ -354,6 +354,12 @@ main {
   ;
 }
 
+ img.store {
+  @apply 
+    h-6 object-cover
+  ;
+}
+
 .card-top h5 {
   @apply 
     text-xl font-bold leading-none text-gray-700
