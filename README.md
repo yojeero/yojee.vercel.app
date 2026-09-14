@@ -9,7 +9,7 @@ Clean UI
 SEO-Friendly   
 Vercel   
 
-Designed for graphic designers, it showcases works, projects, and creative content with an interactive and visually appealing interface. The template includes a built-in radio player and is optimized for easy customization and quick deployment on platforms like Vercel.   
+Designed for graphic designers, it showcases works, projects, and creative content with an interactive and visually appealing interface.  
 
 ##### Tech Stack   
 ```
