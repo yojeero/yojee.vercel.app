@@ -37,9 +37,11 @@
 
 <body class="loading">
 
+  <a href="#main-content" class="skip-link">skip to content</a>
+
   <div class="loader"><div class="line"></div></div>
 
-  <main id="home">
+  <main id="home">   
 
     <div class="header">
 
@@ -51,7 +53,9 @@
         
       </div>
 
-      <h1>I'm Yojee, <span>a Product Engineer</span></h1>
+      <div id="main-content" tabindex="-1"></div>
+
+      <h1>I'm Yojee, <span>a Product Engineer</span></h1>       
 
     </div>
 
@@ -103,7 +107,7 @@
 
         <div class="controls">
 
-          <button id="playToggle" aria-label="Play" class="playIcon">
+          <button id="playToggle" aria-label="Play" aria-pressed="false" class="playIcon">
 
             <svg viewBox="0 0 24 24">
               <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"
@@ -113,7 +117,7 @@
 
           </button>
 
-          <button id="stopIcon" class="stopIcon">      
+          <button id="stopIcon" aria-label="Stop radio" aria-pressed="false" class="stopIcon">      
 
             <svg viewBox="0 0 24 24">
               <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"
@@ -474,12 +478,18 @@
         playBtn.style.display = "block";
         stopBtn.style.display = "none";
         stopWave();
+        playBtn.setAttribute("aria-label", "Play radio");
+        playBtn.setAttribute("aria-pressed", "false");
+        stopBtn.setAttribute("aria-pressed", "false");
       };
 
       const showStopUI = () => {
         playBtn.style.display = "none";
         stopBtn.style.display = "block";
         startWave();
+        stopBtn.setAttribute("aria-label", "Stop radio");
+        playBtn.setAttribute("aria-pressed", "true");
+        stopBtn.setAttribute("aria-pressed", "true");
       };
 
       const reconnect = () => {

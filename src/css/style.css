@@ -94,7 +94,7 @@ main {
 
     grid justify-center justify-self-center
 
-    text-slate-500 leading-relaxed
+    text-stone-700 leading-relaxed
   ;
 }
 
@@ -143,7 +143,7 @@ main {
 
 .header h1 span {
   @apply 
-    text-slate-400/70 leading-none
+    text-stone-500 leading-none
   ;
 }
 
@@ -176,7 +176,7 @@ main {
 
 .about-info h3 {
   @apply 
-    text-slate-400 uppercase  leading-10
+    text-stone-500 uppercase  leading-10
   ;
 }
 
@@ -188,7 +188,7 @@ main {
 
 .about-info a {
   @apply 
-  text-slate-400 
+  text-stone-500  
 
   transition-transform transition-opacity duration-300
 
@@ -324,9 +324,25 @@ main {
   ;
 }
 
+.brand a {
+  @apply 
+    inline-flex
+
+    min-h-8 min-w-8 
+    
+    cursor-pointer 
+    
+    items-center justify-center 
+; 
+}
+
 .brand img {
   @apply 
-    h-10 object-cover
+    h-10 object-contain
+
+    transition-transform ease-in-out duration-300 
+    
+    hover:py-1 hover:px-2 
   ;
 }
 
@@ -415,6 +431,8 @@ main {
     hover:text-green-600
 
     ms-3
+
+    inline-flex items-center min-h-6
   ;
 }
 
@@ -448,7 +466,7 @@ footer a {
   @apply 
     flex items-center justify-center 
 
-    text-2xl text-slate-400 
+    text-2xl text-stone-500 
     
     hover:text-green-600
   ;
@@ -506,6 +524,30 @@ footer svg:hover {
 
     bg-linear-to-r from-lime-600 from-50% to-orange-600 to-50%
   ;
+}
+
+.skip-link {
+
+  @apply 
+    absolute -top-[48px] left-1/2 -translate-x-1/2
+
+    z-10000
+
+    w-40 h-12
+
+    grid place-items-center
+
+    rounded-bl-sm rounded-br-sm outline-0
+
+    text-sm text-stone-500 
+
+    bg-white
+  ;
+
+}
+
+.skip-link:focus {
+  top: 0;
 }
 
 }
