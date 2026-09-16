@@ -1,6 +1,6 @@
 <img src="preview/yo_2.jpg" width="100%" max-width="800px">
 
-## Yojee online [ 🤖 ](https://yojee.vercel.app/)
+### [ 🤖 ](https://yojee.vercel.app/) `yojee` online 
 
 - Tailwind   
 - Responsive Design   
@@ -9,7 +9,7 @@
 - SEO-Friendly   
 - Vercel Ready   
 
-## Tech Stack   
+### Tech Stack   
 ```
 Bun | Vite | Vercel | Tailwind | Vanilla JS   
 ```
