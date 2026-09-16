@@ -1,6 +1,6 @@
 <img src="preview/yo_2.jpg" width="100%" max-width="800px">
 
-### [ 🤖 ](https://yojee.vercel.app/) `yojee` online 
+### `Yojee` [go](https://yojee.vercel.app/) online 
 
 - Tailwind   
 - Responsive Design   
