@@ -1,6 +1,6 @@
 <img src="preview/yo_2.jpg" width="100%" max-width="800px">
 
-### `Yojee` in the cloud. 
+### `Yojee based in the cloud.` 
 
 - Tailwind   
 - Responsive Design   
