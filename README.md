@@ -1,17 +1,17 @@
 <img src="preview/yo_2.jpg" width="100%" max-width="800px">
 
-# [Yojee`s](https://yojee.vercel.app/) website  
+# [Personal](https://yojee.vercel.app/) website  
 
-Tailwind v4   
-Responsive   
-Integrated Radio   
-Clean UI   
-SEO-Friendly   
-Vercel   
+- Tailwind v4   
+- Responsive   
+- Integrated Radio   
+- Clean UI   
+- SEO-Friendly   
+- Vercel   
 
-Designed for graphic designers, it showcases works, projects, and creative content with an interactive and visually appealing interface.  
+> Designed for graphic designers, it showcases works, projects, and creative content with an interactive and visually appealing interface.  
 
-### Tech Stack   
+## Tech Stack   
 ```
 Bun | Vite | Vercel | Tailwind | Vanilla JS   
 ```
