@@ -1,15 +1,13 @@
 <img src="preview/yo_2.jpg" width="100%" max-width="800px">
 
-# [Personal](https://yojee.vercel.app/) website  
+## Yojee online [ 🤖 ](https://yojee.vercel.app/)
 
-- Tailwind v4   
-- Responsive   
-- Integrated Radio   
+- Tailwind   
+- Responsive Design   
+- Online Radio   
 - Clean UI   
 - SEO-Friendly   
-- Vercel   
-
-> Designed for graphic designers, it showcases works, projects, and creative content with an interactive and visually appealing interface.  
+- Vercel Ready   
 
 ## Tech Stack   
 ```
