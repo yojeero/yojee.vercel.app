@@ -2,7 +2,7 @@
 
 <img src="https://img.shields.io/badge/Yojee-7678ed?style=for-the-badge" width="40%" alt="Yojee">   
 
-> Yojee - Product Engineer. 
+> Yojee - Just fork the project and customize it. 
 
 - Clean UI  
 - Online Radio 
@@ -14,5 +14,3 @@
 ```
 Bun | Vite | Tailwind CSS | Vanilla JS   
 ```
-
-> Just fork the project and customize it.
