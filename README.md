@@ -2,7 +2,8 @@
 
 <img src="https://img.shields.io/badge/Yojee-7678ed?style=for-the-badge" width="40%" alt="Yojee">   
 
-> Yojee - Just fork the project and customize it. 
+> [!NOTE]
+> Features 🧼   
 
 - Clean UI  
 - Online Radio 
