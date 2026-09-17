@@ -1,17 +1,18 @@
-<img src="preview/yo_2.jpg" width="100%" max-width="800px">
+<img src="preview/yo_3.jpg" width="100%">
 
-### `Yojee based in the cloud.` 
+<img src="https://img.shields.io/badge/Yojee-7678ed?style=for-the-badge" width="40%" alt="Yojee">   
 
-- Tailwind   
-- Responsive Design   
-- Online Radio   
-- Clean UI   
+> Yojee - Product Engineer. 
+
+- Clean UI  
+- Online Radio 
 - SEO-Friendly   
-- Vercel Ready   
+- Responsive Design  
+- Cloud & Static Hosting Ready
 
-### Tech Stack   
+#### Tech Stack   
 ```
-Bun | Vite | Vercel | Tailwind | Vanilla JS   
+Bun | Vite | Tailwind CSS | Vanilla JS   
 ```
 
-> Just fork and changing for your info and style.
+> Just fork the project and customize it.
